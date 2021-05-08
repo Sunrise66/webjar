@@ -1,0 +1,186 @@
+/*自定义element样式*/
+.el-table td{
+	padding:8px 0;
+}
+.el-table .cell .el-button--text{
+	padding: 5px 0;
+}
+
+.el-dialog__title{
+	position:relative;
+	font-size:20px;
+	padding:0px 10px;
+	line-height:30px;
+	width:95%;
+	height:30px;
+	margin-bottom:10px;
+	color:#FFD04B;
+	border-left:5px solid #FFD04B;
+}
+
+.el-icon-question{
+	font-size:20px;
+	color:#00C1DE;
+}
+.el-tooltip__popper.is-dark{
+	background:#00C1DE;
+}
+.el-tooltip__popper[x-placement^=top] {
+	margin-bottom: 12px
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow {
+	bottom: -6px;
+	border-top-color: #00C1DE;
+	border-bottom-width: 0
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+	bottom: 1px;
+	margin-left: -5px;
+	border-top-color: #00C1DE;
+	border-bottom-width: 0
+}
+
+.el-tooltip__popper[x-placement^=bottom] {
+	margin-top: 12px
+}
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+	top: -6px;
+	border-top-width: 0;
+	border-bottom-color: #00C1DE
+}
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow::after {
+	top: 1px;
+	margin-left: -5px;
+	border-top-width: 0;
+	border-bottom-color: #00C1DE
+}
+
+.el-tooltip__popper[x-placement^=right] {
+	margin-left: 12px
+}
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow {
+	left: -6px;
+	border-right-color: #00C1DE;
+	border-left-width: 0
+}
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+	bottom: -5px;
+	left: 1px;
+	border-right-color: #00C1DE;
+	border-left-width: 0
+}
+
+.el-tooltip__popper[x-placement^=left] {
+	margin-right: 12px
+}
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow {
+	right: -6px;
+	border-right-width: 0;
+	border-left-color: #00C1DE
+}
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow::after {
+	right: 1px;
+	bottom: -5px;
+	margin-left: -5px;
+	border-right-width: 0;
+	border-left-color: #00C1DE
+}
+
+.el-tooltip__popper.is-dark {
+	background: #00C1DE;
+	color: #fff
+}
+
+.el-tooltip__popper.is-light {
+	background: #fff;
+	border: 1px solid #00C1DE
+}
+
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+	border-top-color: #00C1DE
+}
+
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow::after {
+	border-top-color: #fff
+}
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+	border-bottom-color: #00C1DE
+}
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow::after {
+	border-bottom-color: #fff
+}
+
+.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow {
+	border-left-color: #00C1DE
+}
+
+.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow::after {
+	border-left-color: #fff
+}
+
+.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow {
+	border-right-color: #00C1DE
+}
+
+.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow::after {
+	border-right-color: #fff
+}
+
+.el-row{
+	padding:10px 0;
+	margin-right:0;
+}
+.el-dialog__body{
+	padding-top:0px;
+	color:#00C1DE;
+}
+.dialog-footer{
+	display:inline-block;
+}
+.avatar-uploader .el-upload {
+	border: 1px dashed #d9d9d9;
+	border-radius: 6px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.avatar-uploader .el-upload:hover {
+	border-color: #409EFF;
+}
+
+.avatar-uploader-icon {
+	font-size: 28px;
+	color: #8c939d;
+	width: 178px;
+	height: 178px;
+	line-height: 178px;
+	text-align: center;
+}
+
+.avatar {
+	width: 178px;
+	height: 178px;
+	display: block;
+}
+.info-image{
+	float:left;
+	width:50px;
+}
+.info-input{
+	color: #606266;
+	float:left;
+	width:calc(100% - 50px);
+	width:-webkit-calc(100% - 50px);
+	width:-moz-calc(100% - 50px);
+}

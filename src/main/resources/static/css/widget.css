@@ -1,0 +1,13 @@
+/*各控件自定义样式*/
+.wid_column{
+	float:left;
+	width:95%;
+	position:relative;
+	font-size:16px;	
+	line-height:20px;
+	height:20px;
+	padding:5px 10px;
+	margin-bottom:10px;
+	color:#00C1DE;
+	border-bottom:1px solid #00C1DE;
+}
