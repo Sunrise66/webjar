@@ -29,7 +29,7 @@
         </script>
     </head>
     <body ng-app='myapp'>
-        <div class="page-container-wrapper">
+        <div class="page-container-wrapper" id="app">
             <div class="page-container" style="padding-bottom: 120px;">
                 <#nested/>
             </div>
@@ -38,6 +38,11 @@
     <#list jses as js>
         <script type="text/javascript" src="<@spring.url '${js}' />"></script>
     </#list>
+    <script>
+        new Vue({
+            el: '#app'
+        })
+    </script>
     </body>
     </html>
 </#macro>
