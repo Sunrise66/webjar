@@ -38,11 +38,6 @@
     <#list jses as js>
         <script type="text/javascript" src="<@spring.url '${js}' />"></script>
     </#list>
-    <script>
-        new Vue({
-            el: '#app'
-        })
-    </script>
     </body>
     </html>
 </#macro>
