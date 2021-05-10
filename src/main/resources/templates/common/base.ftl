@@ -8,6 +8,7 @@
     <!DOCTYPE html>
     <html>
     <head>
+        <title>${title}</title>
         <@common.importBaseCSS/>
         <#list csses as css>
             <link rel="stylesheet" type="text/css" href="<@spring.url '${css}' />">
