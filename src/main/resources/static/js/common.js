@@ -1,17 +1,17 @@
-Array.prototype.indexOf = function(val) { 
-for (var i = 0; i < this.length; i++) { 
-if (this[i] == val) return i; 
-} 
-return -1; 
+Array.prototype.indexOf = function(val) {
+for (var i = 0; i < this.length; i++) {
+if (this[i] == val) return i;
+}
+return -1;
 };
-Array.prototype.remove = function(val) { 
-	var index = this.indexOf(val); 
-	if (index > -1) { 
-	this.splice(index, 1); 
-	} 
+Array.prototype.remove = function(val) {
+	var index = this.indexOf(val);
+	if (index > -1) {
+	this.splice(index, 1);
+	}
 };
-	
-	
+
+
 axios.defaults.baseURL = top._CTX+"/";
 // 超时时间
 axios.defaults.timeout = 5000;
@@ -133,7 +133,11 @@ function clearObject(data){
 
 function service(){
 	this.requsetPage=function(params,callback){
-		return _HTTP.post(this.url+'/requestPage',params,callback);
+		if(this.requestPageUrl===''){
+			return _HTTP.post(this.url+'/requestPage',params,callback);
+		}else {
+			return _HTTP.post(this.url + this.requestPageUrl,params,callback);
+		}
 	}
 	this.deleteObj=function(id,callback){
 		return _HTTP.delete(this.url+'/'+id,null,callback);
@@ -141,11 +145,11 @@ function service(){
 	this.save=function(member,callback){
 		return _HTTP.post(this.url+'/save',member,callback);
 	}
-	
+
 	this.getData=function(url,params,callback){
 		return _HTTP.get(url,params,callback);
 	}
-	
+
 	this.postData=function(url,saveReqDto,callback){
 		return _HTTP.post(url,saveReqDto,callback);
 	}
@@ -201,6 +205,7 @@ var listApp = {
 				isEdit:true,
 				isAdd:false
 			},
+			requestPageUrl:'',
 			deleteLoading:false,
 			fullscreenLoading : false,
 			allLoaded : false,
@@ -360,33 +365,33 @@ var listApp = {
 	            var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
 	            return Y+M+D+h+m+s;
 		    },
-		    filterDate: function (row, column, value) { 
-		    	 var date = row[column.property];  
-		          if (date == undefined) {  
-		             return "";  
-		          }  
-		          var d = new Date(date); 
-	    	      var year   =  d.getFullYear();  
-	              var month  =  d.getMonth() + 1;  
-	              var day    =  d.getDate(); 
-	              var hour    =  d.getHours(); 
+		    filterDate: function (row, column, value) {
+		    	 var date = row[column.property];
+		          if (date == undefined) {
+		             return "";
+		          }
+		          var d = new Date(date);
+	    	      var year   =  d.getFullYear();
+	              var month  =  d.getMonth() + 1;
+	              var day    =  d.getDate();
+	              var hour    =  d.getHours();
 	              var mines    =  d.getMinutes();
 	              var seconds    =  d.getSeconds();
-		          return year+"/"+month+"/"+day+" "+hour+":"+mines+":"+seconds;  
+		          return year+"/"+month+"/"+day+" "+hour+":"+mines+":"+seconds;
 	        },
-		    filterDateDay: function (row, column, value) { 
-		    	 var date = row[column.property];  
-		          if (date == undefined) {  
-		             return "";  
-		          }  
-		          var d = new Date(date); 
-	    	      var year   =  d.getFullYear();  
-	              var month  =  d.getMonth() + 1;  
-	              var day    =  d.getDate(); 
-		          return year+"/"+month+"/"+day;  
+		    filterDateDay: function (row, column, value) {
+		    	 var date = row[column.property];
+		          if (date == undefined) {
+		             return "";
+		          }
+		          var d = new Date(date);
+	    	      var year   =  d.getFullYear();
+	              var month  =  d.getMonth() + 1;
+	              var day    =  d.getDate();
+		          return year+"/"+month+"/"+day;
 	        },
 		    beforeAvatarUpload:function(file) {
-		    	const isJPG = (file.type === 'image/jpeg' 
+		    	const isJPG = (file.type === 'image/jpeg'
 		        	|| file.type === 'image/png'
 		        	|| file.type==='image/gif'
 		        	|| file.type==='image/bmp');
