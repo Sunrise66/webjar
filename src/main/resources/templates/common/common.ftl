@@ -4,7 +4,7 @@
 </#macro>
 
 <#macro importBaseJs>
-	<script type="text/javascript" src="<@spring.url '/js/libs/vue.js' />"></script>
+	<script type="text/javascript" src="<@spring.url '/js/libs/vue.min.js' />"></script>
 	<script type="text/javascript" src="<@spring.url '/js/libs/element-ui/index.js' />"></script>
 	<script type="text/javascript" src="<@spring.url '/js/libs/jquery.min.js' />"></script>
 	<script type="text/javascript" src="<@spring.url '/js/libs/jquery.url.js' />"></script>
